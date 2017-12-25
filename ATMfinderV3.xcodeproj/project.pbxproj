@@ -7,21 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34A00773A9BC68BEE5DF459A /* Pods_ATMfinderV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58A540AC87293ED5D31E775 /* Pods_ATMfinderV3.framework */; };
+		900924F41FF13B9600FD3CE0 /* GMSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900924F31FF13B9600FD3CE0 /* GMSViewController.swift */; };
+		900924F61FF13FAB00FD3CE0 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900924F51FF13FAB00FD3CE0 /* PlacesViewController.swift */; };
 		90D7F30D1FEFF66000B3160A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7F30C1FEFF66000B3160A /* AppDelegate.swift */; };
-		90D7F30F1FEFF66000B3160A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7F30E1FEFF66000B3160A /* ViewController.swift */; };
+		90D7F30F1FEFF66000B3160A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7F30E1FEFF66000B3160A /* MapViewController.swift */; };
 		90D7F3121FEFF66000B3160A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D7F3101FEFF66000B3160A /* Main.storyboard */; };
 		90D7F3141FEFF66000B3160A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D7F3131FEFF66000B3160A /* Assets.xcassets */; };
 		90D7F3171FEFF66000B3160A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D7F3151FEFF66000B3160A /* LaunchScreen.storyboard */; };
+		90D7F3221FEFF97500B3160A /* GoogleDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7F3211FEFF97500B3160A /* GoogleDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62EE2A9385878157153B8799 /* Pods-ATMfinderV3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMfinderV3.release.xcconfig"; path = "Pods/Target Support Files/Pods-ATMfinderV3/Pods-ATMfinderV3.release.xcconfig"; sourceTree = "<group>"; };
+		900924F31FF13B9600FD3CE0 /* GMSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMSViewController.swift; sourceTree = "<group>"; };
+		900924F51FF13FAB00FD3CE0 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		90D7F3091FEFF66000B3160A /* ATMfinderV3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMfinderV3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D7F30C1FEFF66000B3160A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		90D7F30E1FEFF66000B3160A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		90D7F30E1FEFF66000B3160A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		90D7F3111FEFF66000B3160A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90D7F3131FEFF66000B3160A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90D7F3161FEFF66000B3160A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90D7F3181FEFF66000B3160A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90D7F3211FEFF97500B3160A /* GoogleDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDataProvider.swift; sourceTree = "<group>"; };
+		C0FD44128032B19BD801C595 /* Pods-ATMfinderV3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMfinderV3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ATMfinderV3/Pods-ATMfinderV3.debug.xcconfig"; sourceTree = "<group>"; };
+		D58A540AC87293ED5D31E775 /* Pods_ATMfinderV3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATMfinderV3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34A00773A9BC68BEE5DF459A /* Pods_ATMfinderV3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D4AA47285A5E395AB2BD342 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D58A540AC87293ED5D31E775 /* Pods_ATMfinderV3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		90D7F3001FEFF66000B3160A = {
 			isa = PBXGroup;
 			children = (
 				90D7F30B1FEFF66000B3160A /* ATMfinderV3 */,
 				90D7F30A1FEFF66000B3160A /* Products */,
+				EB505D667AC50FBF9F3F09A4 /* Pods */,
+				1D4AA47285A5E395AB2BD342 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +76,49 @@
 			isa = PBXGroup;
 			children = (
 				90D7F30C1FEFF66000B3160A /* AppDelegate.swift */,
-				90D7F30E1FEFF66000B3160A /* ViewController.swift */,
+				90D7F3201FEFF72B00B3160A /* Controllers */,
+				90D7F31F1FEFF72000B3160A /* View */,
+				90D7F31E1FEFF71200B3160A /* Model */,
 				90D7F3101FEFF66000B3160A /* Main.storyboard */,
 				90D7F3131FEFF66000B3160A /* Assets.xcassets */,
 				90D7F3151FEFF66000B3160A /* LaunchScreen.storyboard */,
 				90D7F3181FEFF66000B3160A /* Info.plist */,
 			);
 			path = ATMfinderV3;
+			sourceTree = "<group>";
+		};
+		90D7F31E1FEFF71200B3160A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				90D7F3211FEFF97500B3160A /* GoogleDataProvider.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		90D7F31F1FEFF72000B3160A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				90D7F30E1FEFF66000B3160A /* MapViewController.swift */,
+				900924F31FF13B9600FD3CE0 /* GMSViewController.swift */,
+				900924F51FF13FAB00FD3CE0 /* PlacesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		90D7F3201FEFF72B00B3160A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EB505D667AC50FBF9F3F09A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0FD44128032B19BD801C595 /* Pods-ATMfinderV3.debug.xcconfig */,
+				62EE2A9385878157153B8799 /* Pods-ATMfinderV3.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90D7F31B1FEFF66000B3160A /* Build configuration list for PBXNativeTarget "ATMfinderV3" */;
 			buildPhases = (
+				6699578D1254E3494A078240 /* [CP] Check Pods Manifest.lock */,
 				90D7F3051FEFF66000B3160A /* Sources */,
 				90D7F3061FEFF66000B3160A /* Frameworks */,
 				90D7F3071FEFF66000B3160A /* Resources */,
+				D6D94B3F1B8B60AE981C40B3 /* [CP] Embed Pods Frameworks */,
+				9E765FA362034EF2A0B63418 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,12 +191,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6699578D1254E3494A078240 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9E765FA362034EF2A0B63418 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ATMfinderV3/Pods-ATMfinderV3-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6D94B3F1B8B60AE981C40B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ATMfinderV3/Pods-ATMfinderV3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		90D7F3051FEFF66000B3160A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90D7F30F1FEFF66000B3160A /* ViewController.swift in Sources */,
+				900924F41FF13B9600FD3CE0 /* GMSViewController.swift in Sources */,
+				90D7F30F1FEFF66000B3160A /* MapViewController.swift in Sources */,
+				900924F61FF13FAB00FD3CE0 /* PlacesViewController.swift in Sources */,
+				90D7F3221FEFF97500B3160A /* GoogleDataProvider.swift in Sources */,
 				90D7F30D1FEFF66000B3160A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +383,7 @@
 		};
 		90D7F31C1FEFF66000B3160A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0FD44128032B19BD801C595 /* Pods-ATMfinderV3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +398,7 @@
 		};
 		90D7F31D1FEFF66000B3160A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62EE2A9385878157153B8799 /* Pods-ATMfinderV3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
