@@ -19,30 +19,24 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: GMSMapView!
     
-    //Variables
     var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         initializeTheLocationManager()
         self.mapView.isMyLocationEnabled = true
     }
     
-    func initializeTheLocationManager()
-    {
+    func initializeTheLocationManager() {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
     }
     
     
-    func locationManager(_ manager: CLLocationManager,      didUpdateLocations locations: [CLLocation]) {
-        
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         var location = locationManager.location?.coordinate
-        
         cameraMoveToLocation(toLocation: location)
-        
     }
     
     
@@ -50,10 +44,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     func cameraMoveToLocation(toLocation: CLLocationCoordinate2D?) {
         if toLocation != nil {
             mapView.camera = GMSCameraPosition.camera(withTarget: toLocation!, zoom: 15)
-            
-            
         }
     }
-
+    
+    
 }
 

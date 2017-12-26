@@ -94,7 +94,6 @@
 		90D7F31F1FEFF72000B3160A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				90D7F30E1FEFF66000B3160A /* MapViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -102,6 +101,7 @@
 		90D7F3201FEFF72B00B3160A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				90D7F30E1FEFF66000B3160A /* MapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
