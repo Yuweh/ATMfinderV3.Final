@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Ask location</string>
+	<string>We use your current location to provide more accurate information about your buddies.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Ask location</string>
+	<string>We use your current location to provide more accurate information about your buddies.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

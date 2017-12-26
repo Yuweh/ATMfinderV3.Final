@@ -5,34 +5,53 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ATMfinderV3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="ATMfinderV3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C8q-BV-7Ol" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="64" width="375" height="507"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8q-BV-7Ol" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1Rr-Eh-FOp"/>
+                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CR9-9h-vrO"/>
+                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KPn-50-S4Y"/>
                             <constraint firstItem="C8q-BV-7Ol" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kpd-kj-VGL"/>
+                            <constraint firstAttribute="bottom" secondItem="C8q-BV-7Ol" secondAttribute="bottom" id="PJp-H8-p06"/>
                             <constraint firstItem="C8q-BV-7Ol" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Qza-hh-ozv"/>
+                            <constraint firstAttribute="bottom" secondItem="C8q-BV-7Ol" secondAttribute="bottom" id="T1u-l1-7P0"/>
                             <constraint firstItem="C8q-BV-7Ol" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XoP-Rs-aWE"/>
+                            <constraint firstAttribute="trailing" secondItem="C8q-BV-7Ol" secondAttribute="trailing" id="b09-Ho-6bi"/>
+                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bHA-En-8Ah"/>
+                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="czM-Wl-OMO"/>
+                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="dUv-j3-ekp"/>
+                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gmM-Sc-aQ6"/>
+                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="i3P-if-wwZ"/>
+                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o9n-rK-lXH"/>
+                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="q96-e1-9dV"/>
+                            <constraint firstAttribute="trailing" secondItem="C8q-BV-7Ol" secondAttribute="trailing" id="rF0-3f-Gip"/>
+                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uUO-HR-1yb"/>
+                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" id="um4-El-gMo"/>
+                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wfb-6v-P8L"/>
+                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="ydC-cE-brl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="GJ7-SQ-lCd"/>
                     <connections>
-                        <outlet property="mapView" destination="C8q-BV-7Ol" id="En4-Wj-45Z"/>
+                        <outlet property="mapView" destination="C8q-BV-7Ol" id="liW-7W-ddH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

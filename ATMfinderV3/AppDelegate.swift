@@ -11,27 +11,21 @@ import GoogleMaps
 import GooglePlaces
 import SwiftyJSON
 
-internal let GoogleAPIkey = "AIzaSyDDhf8kMmTZTxQ2SP-wsTXGNyEuobrOKw0"
+    //let kMapsAPIKey =
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    //ket: "AIzaSyDDhf8kMmTZTxQ2SP-wsTXGNyEuobrOKw0"
+    //key: "AIzaSyDDhf8kMmTZTxQ2SP-wsTXGNyEuobrOKw0"
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        if GoogleAPIkey.isEmpty {
-            let bundleId = Bundle.main.bundleIdentifier!
-            let msg = "Configure API keys inside Appdelegate.swift for your  bundle `\(bundleId)`, " +
-            "see README.GooglePlacesClone for more information"
-            print(msg)
-        }
         
         //Configure API key
-        GMSPlacesClient.provideAPIKey(GoogleAPIkey)
-        GMSServices.provideAPIKey(GoogleAPIkey)
+        GMSPlacesClient.provideAPIKey("AIzaSyAdQsDZr6sNfbPBjvb6Mt8CzQSVk00FTLo")
+        GMSServices.provideAPIKey("AIzaSyAdQsDZr6sNfbPBjvb6Mt8CzQSVk00FTLo")
         return true
     }
 
