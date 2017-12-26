@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    //key: "AIzaSyDDhf8kMmTZTxQ2SP-wsTXGNyEuobrOKw0"
+    //"AIzaSyDDhf8kMmTZTxQ2SP-wsTXGNyEuobrOKw0"
+    //"AIzaSyDcsfSjTpEFHt_tUSHoqnVzPocXsP8qB00"comparison
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,34 +17,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8q-BV-7Ol" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C8q-BV-7Ol" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="518"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="koC-b6-N7H">
+                                <rect key="frame" x="0.0" y="590" width="375" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="VzC-0n-ysJ">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VzC-0n-ysJ" id="abx-hz-j5k">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1Rr-Eh-FOp"/>
-                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CR9-9h-vrO"/>
-                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KPn-50-S4Y"/>
-                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kpd-kj-VGL"/>
-                            <constraint firstAttribute="bottom" secondItem="C8q-BV-7Ol" secondAttribute="bottom" id="PJp-H8-p06"/>
-                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Qza-hh-ozv"/>
-                            <constraint firstAttribute="bottom" secondItem="C8q-BV-7Ol" secondAttribute="bottom" id="T1u-l1-7P0"/>
-                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XoP-Rs-aWE"/>
-                            <constraint firstAttribute="trailing" secondItem="C8q-BV-7Ol" secondAttribute="trailing" id="b09-Ho-6bi"/>
-                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bHA-En-8Ah"/>
-                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="czM-Wl-OMO"/>
-                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="dUv-j3-ekp"/>
-                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gmM-Sc-aQ6"/>
-                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="i3P-if-wwZ"/>
-                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o9n-rK-lXH"/>
-                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="q96-e1-9dV"/>
-                            <constraint firstAttribute="trailing" secondItem="C8q-BV-7Ol" secondAttribute="trailing" id="rF0-3f-Gip"/>
-                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uUO-HR-1yb"/>
-                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" id="um4-El-gMo"/>
-                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wfb-6v-P8L"/>
-                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="ydC-cE-brl"/>
+                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1vi-TY-gHs"/>
+                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BuM-dK-fM5"/>
+                            <constraint firstItem="koC-b6-N7H" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GQ4-Hs-0RF"/>
+                            <constraint firstItem="koC-b6-N7H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SAX-Cl-ucP"/>
+                            <constraint firstItem="koC-b6-N7H" firstAttribute="top" secondItem="C8q-BV-7Ol" secondAttribute="bottom" constant="2" id="fx5-xx-pty"/>
+                            <constraint firstItem="C8q-BV-7Ol" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lYx-HO-aKM"/>
+                            <constraint firstAttribute="bottom" secondItem="koC-b6-N7H" secondAttribute="bottom" id="ou3-xA-Tra"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

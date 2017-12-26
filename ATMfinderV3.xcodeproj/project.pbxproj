@@ -13,7 +13,7 @@
 		90D7F3121FEFF66000B3160A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D7F3101FEFF66000B3160A /* Main.storyboard */; };
 		90D7F3141FEFF66000B3160A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D7F3131FEFF66000B3160A /* Assets.xcassets */; };
 		90D7F3171FEFF66000B3160A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D7F3151FEFF66000B3160A /* LaunchScreen.storyboard */; };
-		90D7F3221FEFF97500B3160A /* GoogleDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7F3211FEFF97500B3160A /* GoogleDataProvider.swift */; };
+		90D7F3221FEFF97500B3160A /* SearchNearbyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7F3211FEFF97500B3160A /* SearchNearbyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		90D7F3131FEFF66000B3160A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90D7F3161FEFF66000B3160A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90D7F3181FEFF66000B3160A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90D7F3211FEFF97500B3160A /* GoogleDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDataProvider.swift; sourceTree = "<group>"; };
+		90D7F3211FEFF97500B3160A /* SearchNearbyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNearbyManager.swift; sourceTree = "<group>"; };
 		C0FD44128032B19BD801C595 /* Pods-ATMfinderV3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMfinderV3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ATMfinderV3/Pods-ATMfinderV3.debug.xcconfig"; sourceTree = "<group>"; };
 		D58A540AC87293ED5D31E775 /* Pods_ATMfinderV3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATMfinderV3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,7 +86,7 @@
 		90D7F31E1FEFF71200B3160A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				90D7F3211FEFF97500B3160A /* GoogleDataProvider.swift */,
+				90D7F3211FEFF97500B3160A /* SearchNearbyManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90D7F30F1FEFF66000B3160A /* MapViewController.swift in Sources */,
-				90D7F3221FEFF97500B3160A /* GoogleDataProvider.swift in Sources */,
+				90D7F3221FEFF97500B3160A /* SearchNearbyManager.swift in Sources */,
 				90D7F30D1FEFF66000B3160A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
