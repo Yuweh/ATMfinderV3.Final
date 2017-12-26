@@ -5,6 +5,8 @@
 [![Platform](https://img.shields.io/badge/platform-iOS%2011-green.svg)](https://developer.apple.com/ios/)
 
 ATM Finder (Module)
+----
+
 #1 Get the Current Location of the User (ask permission to get location, and could be indicated by a marker)
 
 #2 Could display nearby banks (GooglePlaces)
@@ -16,7 +18,7 @@ a.) how may km away,
 
 b.) address of the bank nearby 
 
-c.) if there's 
+c.) indicate the ff:
 
 1. Possible Fee, 
 
