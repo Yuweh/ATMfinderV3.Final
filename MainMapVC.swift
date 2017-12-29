@@ -73,7 +73,7 @@ class MainMapVC: UIViewController, newLocationsDelegate {
             // to compute distance from current location and atm coordinates
             
             let atmLocation = CLLocation(latitude: latitude, longitude: longitude)
-            let userLocation = currentLocation
+            let userLocation = CCLocation(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.latitude)
             
             
             let distanceMeters = userLocation?.distance(from: atmLocation)
@@ -169,6 +169,7 @@ extension MainMapVC: CLLocationManagerDelegate {
             mapView.animate(toLocation: location.coordinate)
             self.updateNearbyLocations(currentLocation: location)
             locationManager.stopUpdatingLocation()
+            currentLocation = CCLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.latitude)
         }
     }
 }
