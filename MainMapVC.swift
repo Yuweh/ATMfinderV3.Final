@@ -1,13 +1,6 @@
-//
-//  MainMapVC.swift
-//  ATMFinder-GoogleMaps
-//
-//  Created by EDI on 27/12/17.
-//  Copyright © 2017 EDI. All rights reserved.
-//
+//refactored - still for improvement :D
 
 import UIKit
-
 import MapKit
 import CoreLocation
 import GoogleMaps
@@ -16,70 +9,44 @@ struct AtmDetailsStruct {
     
     private(set) public var atmName : String
     private(set) public var atmLocation : String
+    private(set) public var atmDistance : String
     
-    init(atmName: String, atmLocation: String) {
+    init(atmName: String, atmLocation: String, atmDistance: String) {
         self.atmName = atmName
         self.atmLocation = atmLocation
-        
+        self.atmDistance = atmDistance
     }
-    
 }
+
+    /***************************************************************/
 
 class MainMapVC: UIViewController, newLocationsDelegate {
     
     var currentLocation: CLLocation! // This is our current location
-    var previousLocation: CLLocation! // If we change location this is our previous location
-    
     let locationManager = CLLocationManager() // Manage our location
-    
-    // We can store our map line - this makes it easier to move and access
-    var mapRouteLine = GMSPolyline()
     
     // Store the location coordinates of the nearby locations
     var locationCoordinates = NSMutableArray()
-    
     var atmDetailsArray: [AtmDetailsStruct] = [AtmDetailsStruct]()
     
- 
+    //Props
     @IBOutlet weak var mapView: GMSMapView!
-    //@IBOutlet var mapView: GMSMapView!
-    
-    
     @IBOutlet weak var atmTableView: UITableView!
-    //
+    @IBOutlet weak var locationLabel: UILabel!
  
 
-    @IBOutlet weak var locationLabel: UILabel!
-    //@IBOutlet weak var locationLabel: UILabel!
-    
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    init() {
-        super.init(nibName: nil, bundle: nil)
-        self.title = "Tourist Map"
-        self.tabBarItem.image = UIImage(named: "icn_30_map.png")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        
         mapView.delegate = self
-        
         SearchNearbyManager.sharedInstance.delegate = self;
-        
-        // Only show the location label if we know our current location and address
-        self.updateLocationLabel(text: "")
-        
-        //connect atmTableView
         atmTableView.delegate = self as! UITableViewDelegate
         atmTableView.dataSource = self as! UITableViewDataSource
+        // Only show the location label if we know our current location and address
+        self.updateLocationLabel(text: "")
     }
+    
     
     // This is a delegate method for returning new locations from the NearbyMapsManager
     func returnNewLocations(locations: NSArray) {
@@ -102,13 +69,28 @@ class MainMapVC: UIViewController, newLocationsDelegate {
             
             let itemLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             
+            
+            // to compute distance from current location and atm coordinates
+            
+            let atmLocation = CLLocation(latitude: latitude, longitude: longitude)
+            let userLocation = currentLocation
+            
+            
+            let distanceMeters = userLocation?.distance(from: atmLocation)
+            let distanceKilometers = distanceMeters! / 1000.00
+            let atmCoordinatesDistance = String(Double(round(100 * distanceKilometers) / 100)) + " km"
+            
             // for atmDetailsArray
             
             let atmName = dict["name"] as! String
             let atmAddress = dict["vicinity"] as! String
+            let atmDistance = atmCoordinatesDistance
             
-            let atmInfo = AtmDetailsStruct(atmName: atmName, atmLocation: atmAddress)
-            print(atmInfo)
+            let atmInfo = AtmDetailsStruct(atmName: atmName, atmLocation: atmAddress, atmDistance: atmDistance)
+            //print(atmInfo) //*un/comment to/not test feed
+            
+    
+            // to populate variables above
             
             atmDetailsArray.append(atmInfo)
             locationCoordinates.addObjects(from: [itemLocation])
@@ -155,6 +137,10 @@ class MainMapVC: UIViewController, newLocationsDelegate {
     
 }
 
+
+    /***************************************************************/
+
+
 extension MainMapVC: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -182,10 +168,12 @@ extension MainMapVC: CLLocationManagerDelegate {
             mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
             mapView.animate(toLocation: location.coordinate)
             self.updateNearbyLocations(currentLocation: location)
-
+            locationManager.stopUpdatingLocation()
         }
     }
 }
+
+    /***************************************************************/
 
 extension MainMapVC: GMSMapViewDelegate {
     
@@ -195,6 +183,8 @@ extension MainMapVC: GMSMapViewDelegate {
     }
 }
 
+    /***************************************************************/
+
 extension MainMapVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -202,6 +192,8 @@ extension MainMapVC: UITableViewDelegate, UITableViewDataSource {
         let atmDetailsInfo = atmDetailsArray[indexPath.row]
         cell.textLabel?.text = atmDetailsInfo.atmName
         cell.textLabel?.text = atmDetailsInfo.atmLocation
+        cell.textLabel?.text = atmDetailsInfo.atmDistance
+        print(atmDetailsInfo) //*un/comment to/not test feed
         
 //        cell.textLabel?.text = atmDetailsInfo.atmName
 //        cell.detailTextLabel?.text = atmDetailsInfo.atmLocation
@@ -218,3 +210,6 @@ extension MainMapVC: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
+
+
+    /***************************************************************/
