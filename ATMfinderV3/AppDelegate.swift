@@ -18,15 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    //"AIzaSyDDhf8kMmTZTxQ2SP-wsTXGNyEuobrOKw0"
-    //"AIzaSyDcsfSjTpEFHt_tUSHoqnVzPocXsP8qB00"comparison
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         //Configure API key
-        GMSPlacesClient.provideAPIKey("AIzaSyAdQsDZr6sNfbPBjvb6Mt8CzQSVk00FTLo")
-        GMSServices.provideAPIKey("AIzaSyAdQsDZr6sNfbPBjvb6Mt8CzQSVk00FTLo")
+        GMSPlacesClient.provideAPIKey(""****** PUT YOUR GOOGLE API KEY HERE ********"")
+        GMSServices.provideAPIKey(""****** PUT YOUR GOOGLE API KEY HERE ********"")
         return true
     }
 
